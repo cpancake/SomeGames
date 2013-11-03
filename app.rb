@@ -12,6 +12,9 @@ require_relative 'sites/init'
 
 config = Oj.load(File.open('config.json').read)
 
+Dir.mkdir('./public/files/games') unless File.exists?('./public/files/games')
+Dir.mkdir('./public/files/images') unless File.exists?('./public/files/images')
+
 enable :sessions
 
 def get_file_contents(url)
