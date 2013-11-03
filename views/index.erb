@@ -1,0 +1,11 @@
+<% if @items and @items.length > 0 %>
+<% @items.each do |item| %>
+	<% if @count % 4 == 0 %><div class="row"><% end %>
+	<div class="col-lg-3 game-box">
+		<div style="background-image:url(/files/images/<%=item[:thumb]%>);" onclick="window.location='/game/<%=item[:slug]%>'" class="game-thumb"></div>
+		<a href="/game/<%=item[:slug]%>" class="game-name"><%=item[:name]%></a>
+	</div>
+	<% if @count % 4 == 3 or @count == @items.length - 1 %></div><% end %>
+	<% @count += 1 %>
+<% end %>
+<% end %>

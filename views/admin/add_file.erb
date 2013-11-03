@@ -1,0 +1,43 @@
+<% if @errors and @errors.length > 0 %>
+<div class="alert alert-danger">Error!
+	<ul>
+	<% @errors.each do |e| %>
+		<li><%= e %></li>
+	<% end %>
+</ul>
+</div>
+<% end %>
+<form action="/admin/add" method="POST" class="form-horizontal">
+	<div class="form-group">
+		<label class="col-lg-1 control-label">Name</label>
+		<div class="col-lg-5">
+			<input type="text" class="form-control" name="name" <% if @name %> value="<%= @name %>" <% end %>>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-lg-1 control-label">File</label>
+		<div class="col-lg-5">
+			<input type="text" class="form-control" name="file" <% if @file %> value="<%= @file %>" <% end %>>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-lg-1 control-label">Thumb</label>
+		<div class="col-lg-5">
+			<input type="text" class="form-control" name="thumb" <% if @thumb %> value="<%= @thumb %>" <% end %>>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-lg-1 control-label">Type</label>
+		<div class="col-lg-5">
+			<select name="type" class="form-control">
+				<option value="flash" selected>Flash</option>
+				<option value="download">Downloadable</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-lg-5 col-lg-offset-1">
+			<input type="submit" class="btn btn-success" value="Add">
+		</div>
+	</div>
+</form>

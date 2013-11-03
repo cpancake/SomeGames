@@ -1,0 +1,13 @@
+<h2><%= @name %></h2>
+<% if @flash %>
+	<div id="flashContainer" style='width:<%=@width%>px;height:<%=@height%>px;'></div>
+	<script>
+	swfobject.embedSWF('/files/games/<%=@file%>', 'flashContainer', '<%=@width%>', '<%=@height%>', '10.0.0', '/files/expressInstall.swf');
+	</script>
+<% else %>
+	<div><img src='/files/images/<%=@thumb%>' style='margin-bottom:5px;'></div>
+	<a href="/download/<%=@slug%>" class="btn btn-warning btn-lg">Download (<%=@size%>)</a>
+<% end %>
+<div>
+	<a href="/" class="btn btn-link">Return to Home</a>
+</div>

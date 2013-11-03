@@ -1,0 +1,22 @@
+<% if @errors and @errors.length > 0 %>
+<div class="alert alert-danger">Error!
+	<ul>
+	<% @errors.each do |e| %>
+		<li><%= e %></li>
+	<% end %>
+</ul>
+</div>
+<% end %>
+<form action="" method="POST" class="form-horizontal">
+	<div class="form-group">
+		<label class="col-lg-1 control-label">URL</label>
+		<div class="col-lg-5">
+			<input type="text" class="form-control" name="url">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-lg-5 col-lg-offset-1">
+			<input type="submit" class="btn btn-success" value="Add">
+		</div>
+	</div>
+</form>

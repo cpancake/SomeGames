@@ -1,0 +1,46 @@
+.container
+{
+	width: 960px;
+}
+#top-nav
+{
+	list-style-type: none;
+	padding-left: 0;
+}
+#top-nav li
+{
+	display: inline;
+}
+#flashContainer
+{
+	margin: auto;
+}
+.game-thumb
+{
+	width: 140px;
+	height: 120px;
+	background-position: center;
+	border: 1px solid #666;
+	border-radius: 5px;
+	-webkit-transition: opacity 0.2s linear;
+	margin: auto;
+	background-size: cover;
+}
+.game-thumb:hover
+{
+	opacity: 0.9;
+	cursor: pointer;
+}
+.game-box
+{
+	text-align: center;
+}
+.game-name
+{
+	color: #444;
+}
+.game-name:hover
+{
+	text-decoration: none;
+	color: #777;
+}

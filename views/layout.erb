@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Some Games</title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/common.css" rel="stylesheet">
+	<script src="//code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/swfobject.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Some Games</h1>
+		<% if not @nomenu %>
+		<ul id="top-nav">
+			<li><a href="/" class="btn btn-default" >Flash</a></li>
+			<li><a href="/apps" class="btn btn-default">Downloadable</a></li>
+		</ul>
+		<% end %>
+		<%= yield %>
+	</div>
+</body>
+</html>

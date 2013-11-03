@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'sequel'
+gem 'sqlite3'
+gem 'httparty'
+gem 'swf_file'
+gem 'oj'

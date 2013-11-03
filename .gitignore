@@ -1,0 +1,5 @@
+*.db
+Gemfile.lock
+config.json
+public/files/games/*
+public/files/images/*
